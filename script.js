@@ -40,10 +40,23 @@ if (loadBtn) {
     });
 }
 
-// FAQ Toggle
-document.querySelectorAll(".question").forEach((q) => {
-    q.addEventListener("click", () => {
-        q.nextElementSibling.classList.toggle("visible");
+// Enhanced FAQ Toggle with Collapse
+document.querySelectorAll('.faq-item').forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        // Collapse all items
+        document.querySelectorAll('.faq-item').forEach(faq => {
+            faq.classList.remove('active');
+        });
+
+        // Expand current item if not already open
+        if (!isActive) {
+            item.classList.add('active');
+        }
     });
 });
 
@@ -55,3 +68,13 @@ if (clock) {
         clock.textContent = now.toLocaleTimeString();
     }, 1000);
 }
+
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
