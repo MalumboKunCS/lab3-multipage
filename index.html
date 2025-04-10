@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Tech Solutions</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- JS file loaded after DOM (defer) -->
+    <script src="script.js" defer></script>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
     <nav>
         <div class="logo">TechSolutions</div>
         <ul class="nav-links">
@@ -16,25 +23,32 @@
         </ul>
     </nav>
 
+    <!-- Hero Section -->
     <header class="hero">
         <h1>Welcome to TechSolutions</h1>
         <p>Innovative solutions for your digital needs</p>
     </header>
 
+    <!-- Main Content -->
     <main class="flex-container">
         <section class="intro">
             <h2>About Us</h2>
             <p>We specialize in providing cutting-edge technology solutions for businesses of all sizes.</p>
         </section>
-        
+
         <aside class="sidebar">
             <h3>Latest News</h3>
             <p>New service launch: Cloud Computing Solutions</p>
         </aside>
+
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle">Switch Theme</button>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2023 TechSolutions. All rights reserved.</p>
     </footer>
+
 </body>
 </html>

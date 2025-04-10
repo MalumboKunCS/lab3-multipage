@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Tech Solutions</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- External Styles and Script -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
     <nav>
         <div class="logo">TechSolutions</div>
         <ul class="nav-links">
@@ -16,31 +21,56 @@
         </ul>
     </nav>
 
+    <!-- Main Contact Section -->
     <main class="contact-container">
         <h2>Contact Us</h2>
-        <form class="contact-form">
+
+        <!-- Contact Form -->
+        <form id="contactForm" class="contact-form">
             <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="nameInput">Name:</label>
+                <input type="text" id="nameInput" name="name" required />
             </div>
+
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required />
             </div>
+
             <div class="form-group">
                 <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" required>
+                <input type="text" id="subject" name="subject" required />
             </div>
+
             <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="messageInput">Message:</label>
+                <textarea id="messageInput" name="message" rows="5" required></textarea>
             </div>
+
             <button type="submit" class="submit-btn">Send Message</button>
+
+            <!-- Response Message -->
+            <p id="response" class="response-text"></p>
         </form>
+
+        <!-- Team Members Section -->
+        <section>
+            <h2>Team Members</h2>
+            <ul id="userList"></ul>
+            <button id="loadUsersBtn">Load Users</button>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-item">
+            <h3 class="question">What is this website about?</h3>
+            <p class="answer">This is a demo project for learning web development.</p>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2023 TechSolutions. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
