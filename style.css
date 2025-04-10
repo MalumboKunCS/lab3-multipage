@@ -232,3 +232,23 @@ footer {
         padding: 1rem;
     }
 }
+.clock {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #333;
+}
+
+.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+.dark-theme nav, 
+.dark-theme footer {
+    background-color: #1f1f1f;
+}
+.answer {
+    display: none;
+}
+.answer.visible {
+    display: block;
+}
